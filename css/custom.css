@@ -1,0 +1,33 @@
+/* 全站背景统一：覆盖 body、头部、主页、底部、布局容器 */  
+body,  
+#web_bg,  
+#page-header,  
+#footer,  
+.layout {  
+  background-image: url('/images/alhs.jpg') !important; /* 替换为你的实际背景图名（如 alhs.jpg） */  
+  background-attachment: fixed !important; /* 背景固定，滚动时不移动，视觉上“一张图” */  
+  background-size: cover !important;        /* 拉伸覆盖容器，保持比例 */  
+  background-position: center center !important; /* 背景图居中 */  
+  background-repeat: no-repeat !important;  /* 背景图不重复 */  
+}  
+
+/* 清除内容区域默认背景（避免主题默认背景遮挡全局图） */  
+#content-inner {  
+  background: transparent !important;  
+}  
+
+/* （可选）若页头/底部仍有残留背景色，强制透明 */  
+#page-header,  
+#footer {  
+  background-color: transparent !important;  
+}  
+/* 全局鼠标样式：小点 +  fallback 确保兼容 */  
+* {  
+  cursor: url('/images/鼠标2.png'), auto !important;  
+  /* 替换 /images/cursor-dot.png 为你的实际路径（如 /images/dot.png） */  
+}  
+
+/* 可选：hover 时还原默认指针（避免点击链接时异常） */  
+a, button, .icon, [clickable] {  
+  cursor: auto !important;  
+}  
