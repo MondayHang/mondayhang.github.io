@@ -31,3 +31,10 @@ body,
 a, button, .icon, [clickable] {  
   cursor: auto !important;  
 }  
+
+
+/* 可选：文章区域背景（若需半透明显示，与渐变背景融合） */
+.layout_post > #post {
+  background: rgba(9, 175, 230, 0.8) !important; /* 白色半透明，可根据需要调整透明度 */
+  border-radius: 8px; /* 可选：增加圆角，优化视觉 */
+}
