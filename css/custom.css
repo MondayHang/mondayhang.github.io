@@ -75,3 +75,50 @@ body {
 pre, code, .highlight {
   font-family: 'Consolas', 'Monaco', 'Menlo', 'Courier New', monospace !important;
 }
+
+
+
+/* 定义白天和夜间模式的透明背景色，可根据需要调整透明度 */
+:root {
+  --trans-light: rgba(255, 255, 255, 0.8); /* 白天模式，0.8为透明度 */
+  --trans-dark: rgba(25, 25, 25, 0.8);     /* 夜间模式，0.8为透明度 */
+}
+
+/* 首页文章卡片背景透明 */
+#recent-posts > .recent-post-item {
+  background: transparent !important;
+}
+
+/* 文章详情页背景透明 */
+.layout_post > #post,
+.layout_post > #page {
+  background: transparent !important;
+}
+
+/* 文章详情页内的代码块、引用块等子元素，也可以设置透明 */
+.layout_post #post .highlight,
+.layout_post #post pre,
+.layout_post #post blockquote {
+  background: transparent !important;
+}
+
+/* 夜间模式下的文章详情页背景透明 */
+[data-theme="dark"] .layout_post > #post,
+[data-theme="dark"] .layout_post > #page {
+  background: transparent !important;
+}
+
+/* 侧边栏所有卡片背景透明 */
+#aside-content .card-widget {
+  background: transparent !important;
+}
+
+/* 夜间模式下的背景透明 */
+[data-theme="dark"] #recent-posts > .recent-post-item,
+[data-theme="dark"] .layout_page > div:first-child:not(.recent-posts),
+[data-theme="dark"] .layout_post #page,
+[data-theme="dark"] .layout_post #post,
+[data-theme="dark"] .read-mode .layout_post #post,
+[data-theme="dark"] #aside-content .card-widget {
+  background: var(--trans-dark);
+}
